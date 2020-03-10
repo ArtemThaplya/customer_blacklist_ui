@@ -1,7 +1,7 @@
 # Project exclude paths
 /target/
 *.iml
-./.idea/
+/.idea/
 /build/
 .gradle
 /gradle/
@@ -9,3 +9,4 @@ gradlew
 gradlew.bat
 src/angular/app/node_modules/
 src/main/resources/static/
+/.idea/.gitignore
