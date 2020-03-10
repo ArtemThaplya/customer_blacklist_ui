@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <p class="my-5">
+    <a routerLink="add" class="btn btn-primary">
+      <i class="fas fa-user-plus ml-2"> Add Employee </i></a>
+  </p>
+</div>
+<table class="table table-striped table-responsive-md">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <ng-template ngFor let-employee [ngForOf]="employees">
+    <td> {{employee.id}}</td>
+    <td> {{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+    <td>{{employee.email}}</td>
+    <td>
+      <a [routerLink]="['/edit', employee.id]"
+         class="btn btn-primary">
+        <i class="fas fa-user-edit ml-2"></i></a>
+    </td>
+    <td>
+      <a (click)="deleteEmployee(employee.id)"
+         class="btn btn-primary">
+        <i class="fas fa-user-times ml-2"></i>
+      </a>
+    </td>
+    <tbody>
+    <tr>
+    </tr>
+    </tbody>
+  </ng-template>
+</table>

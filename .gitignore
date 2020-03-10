@@ -1,2 +1,11 @@
 # Project exclude paths
 /target/
+*.iml
+./.idea/
+/build/
+.gradle
+/gradle/
+gradlew
+gradlew.bat
+src/angular/app/node_modules/
+src/main/resources/static/
