@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/")
 public class EmployeeMvcController {
   private final EmployeeService service;
   public EmployeeMvcController(EmployeeService service) {
