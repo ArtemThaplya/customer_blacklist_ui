@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Employee} from '../../model/Employee';
-import {RestService} from '../../sercvices/rest.service';
+import {RestService} from '../../services/rest.service';
 import {Router} from "@angular/router";
 
 @Component({
@@ -17,8 +17,10 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   addEmployee() {
-    this.restService.addEmployee(this.employee);
-    this.router.navigate(['/list']);
+    this.restService.addEmployee(this.employee).subscribe(() => {
+        this.router.navigate(['/list']);
+      }
+    );
   }
 
   ngOnInit(): void {

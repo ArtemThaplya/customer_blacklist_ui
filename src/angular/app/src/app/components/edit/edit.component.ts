@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {RestService} from "../../sercvices/rest.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {RestService} from "../../services/rest.service";
 import {Employee} from "../../model/Employee";
-import {Router} from "@angular/router";
+import {Observable} from "rxjs";
+import {ActivatedRoute} from "@angular/router";
+import {StateService} from "../../services/state.service";
 
 @Component({
   selector: 'app-edit',
@@ -12,13 +14,14 @@ export class EditComponent implements OnInit {
   employee = new Employee();
 
   constructor(private restService: RestService,
-              private router: Router) { }
+              public state: StateService) {
+  }
 
-  editEmployee(id: number){
-    this.restService.editEmployee(this.employee, id);
-    // this.router.navigate(['/edit/:id']);
+  editEmployee(){
+    this.restService.editEmployee(this.employee.id);
   }
 
   ngOnInit(): void {
+    this.employee = this.state.employee
   }
 }

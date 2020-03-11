@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {RestService} from '../../sercvices/rest.service';
+import {RestService} from '../../services/rest.service';
 import {Employee} from '../../model/Employee';
+import {Router} from "@angular/router";
+import {StateService} from "../../services/state.service";
 
 @Component({
   selector: 'app-list',
@@ -10,7 +12,11 @@ import {Employee} from '../../model/Employee';
 export class ListComponent implements OnInit {
   employees: Employee[];
 
-  constructor(private restService: RestService) {
+  constructor(
+    private restService: RestService,
+    private router: Router,
+    private state: StateService
+  ) {
   }
 
   deleteEmployee(id:number){
@@ -22,5 +28,10 @@ export class ListComponent implements OnInit {
     this.restService.getEmployeeList().subscribe(res => {
       this.employees = res;
     });
+  }
+
+  edit(employee: Employee) {
+    this.state.employee = employee;
+    this.router.navigate(['/edit']);
   }
 }

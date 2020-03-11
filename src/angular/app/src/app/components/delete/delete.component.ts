@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {RestService} from "../../sercvices/rest.service";
+import {RestService} from "../../services/rest.service";
 import {Router} from "@angular/router";
 import {Employee} from "../../model/Employee";
 

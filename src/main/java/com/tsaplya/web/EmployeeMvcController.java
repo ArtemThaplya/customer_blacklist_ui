@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@CrossOrigin
 public class EmployeeMvcController {
   private final EmployeeService service;
   public EmployeeMvcController(EmployeeService service) {
