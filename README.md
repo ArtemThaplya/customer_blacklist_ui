@@ -2,12 +2,12 @@
 
 
 Этот проект основан на проекте Spring Boot и использует:
+<li> Java
 <li> Spring Boot
 <li> Spring Data
 <li> Spring Security
 <li> H2
 <li> Thymeleaf
-<li> JavaScript
 <li> Maven
 
 ## Screenshot
