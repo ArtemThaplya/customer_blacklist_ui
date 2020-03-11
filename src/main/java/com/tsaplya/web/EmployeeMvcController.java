@@ -22,13 +22,6 @@ public class EmployeeMvcController {
     this.service = service;
   }
 
-//  @GetMapping("list")
-//  public ResponseEntity<List<EmployeeEntity>> getAllEmployees() {
-//    List<EmployeeEntity> employeeEntities = service.getAllEmployees();
-//    return ResponseEntity.ok(employeeEntities);
-//  }
-
-
   @RequestMapping("/")
   public String getAllEmployees(Model model) {
     List<EmployeeEntity> list = service.getAllEmployees();
