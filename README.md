@@ -6,7 +6,7 @@
 <li> Angular 9
 <li> Gradle
 
-##Tutorial: Getting Started
+## Tutorial: Getting Started
 - Клонируйте этот репозиторий.
 ```
 git clone https://github.com/ArtemThaplya/customer_blacklist_ui.git
