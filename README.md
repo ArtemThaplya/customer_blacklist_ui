@@ -11,6 +11,7 @@
 <li> Maven
 
 ## Screenshot
+![Без імені](https://user-images.githubusercontent.com/24450386/76417998-8a0c3c00-63a6-11ea-9268-689ed25fd394.jpg)
 
 Приложение позволяет войти в систему под своим логином:
  
