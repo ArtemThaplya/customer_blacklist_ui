@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {RestService} from '../../services/rest.service';
 import {Employee} from '../../model/Employee';
-import {Router} from "@angular/router";
-import {StateService} from "../../services/state.service";
+import {Router} from '@angular/router';
+import {StateService} from '../../services/state.service';
 
 @Component({
   selector: 'app-list',
@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
   ) {
   }
 
-  deleteEmployee(id:number){
+  deleteEmployee(id: number) {
     this.employees = this.employees.filter(employee => employee.id !== id);
     this.restService.deleteEmployee(id);
   }

@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
 .center {
   text-align: center;
 }

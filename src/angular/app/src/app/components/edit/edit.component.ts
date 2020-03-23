@@ -17,11 +17,11 @@ export class EditComponent implements OnInit {
               public state: StateService) {
   }
 
-  editEmployee(){
+  editEmployee() {
     this.restService.editEmployee(this.employee.id);
   }
 
   ngOnInit(): void {
-    this.employee = this.state.employee
+    this.employee = this.state.employee;
   }
 }

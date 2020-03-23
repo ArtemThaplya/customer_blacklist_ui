@@ -15,7 +15,7 @@ export class DeleteComponent implements OnInit {
   constructor(private restService: RestService,
               private router: Router) { }
 
-  deleteEmployee(id:number){
+  deleteEmployee(id: number) {
     this.employees.filter(employee => employee.id !== id);
     this.restService.deleteEmployee(id);
   }

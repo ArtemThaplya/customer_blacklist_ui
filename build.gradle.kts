@@ -30,6 +30,11 @@ dependencies {
     implementation("org.hibernate:hibernate-core:5.4.3.Final")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+//    implementation("org.springframework.boot:spring-boot-starter-security")
+
+    implementation("com.sun.xml.bind:jaxb-core:2.3.0.1")
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
+    implementation("com.sun.xml.bind:jaxb-impl:2.3.1")
 
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.2.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-params", version = "5.2.0")
