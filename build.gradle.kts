@@ -7,8 +7,8 @@ repositories {
 
 plugins {
     id("java")
-    id("org.springframework.boot") version "2.1.6.RELEASE"
-    id("io.spring.dependency-management") version "1.0.7.RELEASE"
+    id("org.springframework.boot") version "2.2.5.RELEASE"
+    id("io.spring.dependency-management") version "1.0.9.RELEASE"
     id("com.github.node-gradle.node") version "2.2.1"
 }
 
@@ -30,7 +30,17 @@ dependencies {
     implementation("org.hibernate:hibernate-core:5.4.3.Final")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
-//    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-data-rest")
+    implementation("com.okta.spring:okta-spring-boot-starter:1.4.0")
+
+
+//    implementation("org.springframework.security:spring-security-jwt:1.1.0.RELEASE")
+//    implementation("org.springframework.security.oauth:spring-security-oauth2:2.4.0.RELEASE")
+
+
+//    implementation("org.springframework.boot:spring-boot-starter-data-rest")
+//    implementation("org.projectlombok:lombok:1.18.12")
+
 
     implementation("com.sun.xml.bind:jaxb-core:2.3.0.1")
     implementation("javax.xml.bind:jaxb-api:2.3.1")

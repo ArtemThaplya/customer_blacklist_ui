@@ -28,7 +28,7 @@ export class RestService {
     return this.http.post(url, employee, httpOptions);
   }
 
-  editEmployee(employeeId: number){
+  editEmployee(employeeId: number) {
     const url = `${this.baseUrl}/${this.editEmployeeSuffix}/${employeeId}`;
     this.http.put(url, null, httpOptions).subscribe();
   }
@@ -38,7 +38,7 @@ export class RestService {
     return  this.http.get<Employee[]>(url);
   }
 
-  deleteEmployee(id){
+  deleteEmployee(id) {
     const url = `${this.baseUrl}/${this.deleteEmployeeSuffix}/${id}`;
     this.http.delete(url, httpOptions).subscribe();
   }
